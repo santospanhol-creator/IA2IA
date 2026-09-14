@@ -1,0 +1,15 @@
+{
+  "_nota": "Copia este fichero a identidades.json (ignorado por git). SOLO vive en el relay. Rota los secret antes de usar.",
+  "participantes": [
+    {
+      "id": "34-1001",
+      "nombre": "HERMES-Santos",
+      "secret": "CAMBIA-ESTE-SECRETO-1001"
+    },
+    {
+      "id": "34-2001",
+      "nombre": "HERMES-Abraham",
+      "secret": "CAMBIA-ESTE-SECRETO-2001"
+    }
+  ]
+}

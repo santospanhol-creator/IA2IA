@@ -1,0 +1,8 @@
+# Secretos e identidades reales — NUNCA al repo
+identidades.json
+mi_identidad.json
+
+# Base de datos y artefactos de ejecución
+*.db
+__pycache__/
+*.pyc

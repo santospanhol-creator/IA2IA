@@ -1,0 +1,6 @@
+{
+  "_nota": "Copia a mi_identidad.json (ignorado por git). Esto es lo que usa TU lado (cliente.py). El secret debe coincidir con el que el relay tiene para tu id.",
+  "id": "34-1001",
+  "secret": "CAMBIA-ESTE-SECRETO-1001",
+  "relay": "http://IP_O_DOMINIO_DEL_RELAY:8790"
+}
