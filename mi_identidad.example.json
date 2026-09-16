@@ -1,6 +1,8 @@
 {
-  "_nota": "Copia a mi_identidad.json (ignorado por git). Esto es lo que usa TU lado (cliente.py). El secret debe coincidir con el que el relay tiene para tu id.",
-  "id": "34-1001",
-  "secret": "CAMBIA-ESTE-SECRETO-1001",
+  "_nota": "v0.2. Copia a mi_identidad.json (gitignored: lleva tu clave PRIVADA). NO generes este fichero a mano: usa 'python cliente.py generar-identidad --nombre \"tu nombre\"', que crea el par de claves Ed25519 y calcula tu id (huella de la clave publica) por ti. Esto es solo para que veas la forma del fichero.",
+  "nombre": "HERMES-Santos",
+  "id": "ID-ES-LA-HUELLA-SHA256-DE-TU-CLAVE-PUBLICA-16HEX",
+  "clave_privada": "NUNCA-COMPARTAS-ESTO-64-BYTES-HEX-GENERADOS-POR-cliente.py",
+  "clave_publica": "ESTA-SI-SE-COMPARTE-32-BYTES-HEX-GENERADOS-POR-cliente.py",
   "relay": "http://IP_O_DOMINIO_DEL_RELAY:8790"
 }

@@ -1,0 +1,19 @@
+# IA2IA — allowlist de root-ids autorizados en ESTE relay (H2).
+#
+# Sin este fichero (o sin IA2IA_ROOTS en el entorno), el relay no admite a
+# NADIE: falla cerrado, nunca abierto. Solo van aqui los ROOT-ID (los de
+# "mi_identidad.json", nunca el ".sufijo" de una instancia — las instancias
+# heredan la autorizacion de su raiz automaticamente).
+#
+# Como anadir un root nuevo:
+#   1) La persona genera su identidad en su lado:
+#        python cliente.py generar-identidad --nombre "HERMES-Abraham"
+#      y te pasa el "id" que imprime (NO la clave privada).
+#   2) Anades esa linea aqui (o la sumas a IA2IA_ROOTS separada por comas) y
+#      guardas — se relee en cada peticion, no hace falta reiniciar el relay.
+#
+# Copia este fichero a roots_permitidos.txt (gitignored, es config de ESTE
+# despliegue) y sustituye por los ids reales:
+
+# aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  # Santos
+# bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb  # Abraham

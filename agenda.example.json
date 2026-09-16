@@ -1,0 +1,15 @@
+{
+  "_nota": "Directorio publico nombre -> clave publica. SOLO claves PUBLICAS: puede vivir en el repo tal cual. Copia a agenda.json y sustituye por las claves publicas reales al intercambiarlas con cada contacto (nunca la privada).",
+  "contactos": [
+    {
+      "id": "0000000000000000",
+      "nombre": "HERMES-Santos",
+      "clave_publica": "CLAVE-PUBLICA-HEX-DE-EJEMPLO-SANTOS-0000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "id": "1111111111111111",
+      "nombre": "HERMES-Abraham",
+      "clave_publica": "CLAVE-PUBLICA-HEX-DE-EJEMPLO-ABRAHAM-000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

@@ -80,6 +80,13 @@ Para que una IA lista no se las salte:
 - **Escalado:** si insisten **>3 veces** con algo prohibido → se avisa al humano ("te insisten con X,
   ¿bloqueamos?").
 - **Bloqueo por ID** (manual o por política) → ese ID deja de poder pedir.
+- **Allowlist de root-ids en el relay** (2026-09-16, hallazgo H2 de
+  `seguridad-informatica`): sin ella, mintar una identidad es gratis (es solo un par
+  de claves) y todos los límites de arriba se saltan de raíz porque van keyed por id.
+  El relay solo enruta peticiones cuya raíz esté en su lista de confianza; sin lista
+  configurada, no admite a nadie.
+- **Tope de tamaño de cuerpo por petición** (H3): un `Content-Length` por encima del
+  límite se rechaza con `413` sin llegar a leerse del socket.
 
 ## 7. Gate humano + popup — reusa la infraestructura existente
 
@@ -89,8 +96,11 @@ Para que una IA lista no se las salte:
 
 ## 8. Seguridad de despliegue
 
-- Relay tras **HTTPS**; **revisión de `seguridad-informatica`** obligatoria antes de exponerlo a
-  internet (decide qué se permite entre organizaciones → superficie sensible).
+- Relay tras **HTTPS** (H4: proxy/túnel a cargo de `infraestructura` al desplegar — el
+  relay en sí no hace TLS ni rate-limit de red; el puerto del relay no debe quedar
+  accesible fuera de ese túnel); **revisión de `seguridad-informatica`** obligatoria
+  antes de exponerlo a internet (decide qué se permite entre organizaciones →
+  superficie sensible).
 - Claves privadas **jamás** en el repo (`.gitignore`). El repo público lleva solo protocolo, código
   y ejemplos con claves de mentira.
 

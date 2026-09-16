@@ -1,8 +1,21 @@
-# Secretos e identidades reales — NUNCA al repo
-identidades.json
+# Identidad y secretos reales — NUNCA al repo (clave privada dentro)
 mi_identidad.json
+mi_instancia.json
 
-# Base de datos y artefactos de ejecución
+# v0.1 (obsoleto): registro de secretos HMAC compartidos, si alguien lo deja
+identidades.json
+
+# Politica local (no es secreto, pero refleja tu configuracion interna)
+politica.json
+
+# Allowlist de root-ids de ESTE relay (no es secreto -los ids son publicos-
+# pero es config de este despliegue concreto, no una plantilla)
+roots_permitidos.txt
+
+# .env (tokens de Telegram para el aviso de popup, etc.)
+.env
+
+# Base de datos y artefactos de ejecucion
 *.db
 __pycache__/
 *.pyc

@@ -1,0 +1,13 @@
+{
+  "_nota": "Copia a politica.json (gitignored: refleja que automatizas en TU lado, mejor no publico). Patrones regex sobre 'accion + params' en minusculas. La denylist de casa (credenciales, cuentas bancarias, pagos...) esta fija en politica.py y se suma siempre a la tuya: no se puede quitar desde aqui. denylist gana siempre sobre allowlist.",
+  "denylist": [
+    "borrar.*produccion",
+    "drop\\s+table",
+    "delete\\s+from"
+  ],
+  "allowlist": [
+    "^ping$",
+    "^dame_saldo_cliente$",
+    "^consultar_.*"
+  ]
+}
